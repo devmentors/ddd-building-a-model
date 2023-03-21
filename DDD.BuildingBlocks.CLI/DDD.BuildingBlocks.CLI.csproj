@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DDD.BuildingBlocks.Core.V1\DDD.BuildingBlocks.Core.V1.csproj" />
+    <ProjectReference Include="..\DDD.BuildingBlocks.Core.V2.Encapsulated\DDD.BuildingBlocks.Core.V2.Encapsulated.csproj" />
+  </ItemGroup>
+
+</Project>
