@@ -6,7 +6,7 @@ Computer hardware store (e-commerce, sorry 💔)
 
 ## Commentary
 
-🎦 YouTube (PL): https://www.youtube.com/@DevMentorsPL
+🎦 YouTube (PL): https://www.youtube.com/watch?v=HJHmSH4X_dk
 
 ## Requirements
 
