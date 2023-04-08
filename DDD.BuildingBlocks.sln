@@ -26,6 +26,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDD.BuildingBlocks.Core.V6.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDD.BuildingBlocks.Core.V7.AsyncBestEffort", "DDD.BuildingBlocks.Core.V7.AsyncBestEffort\DDD.BuildingBlocks.Core.V7.AsyncBestEffort.csproj", "{457A8AE1-AE21-447B-A4B5-37F0CD99BCD4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDD.BuildingBlocks.V8.LogicFragmentation", "DDD.BuildingBlocks.V8.LogicFragmentation\DDD.BuildingBlocks.V8.LogicFragmentation.csproj", "{84E32BB8-2B09-43A0-8688-9849FF6B7405}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDD.BuildingBlocks.V9.OutOfProcDependency", "DDD.BuildingBlocks.V9.OutOfProcDependency\DDD.BuildingBlocks.V9.OutOfProcDependency.csproj", "{38AE4C48-A346-45B9-BEA4-1E8C13E666B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +68,14 @@ Global
 		{457A8AE1-AE21-447B-A4B5-37F0CD99BCD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{457A8AE1-AE21-447B-A4B5-37F0CD99BCD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{457A8AE1-AE21-447B-A4B5-37F0CD99BCD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84E32BB8-2B09-43A0-8688-9849FF6B7405}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84E32BB8-2B09-43A0-8688-9849FF6B7405}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84E32BB8-2B09-43A0-8688-9849FF6B7405}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84E32BB8-2B09-43A0-8688-9849FF6B7405}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38AE4C48-A346-45B9-BEA4-1E8C13E666B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38AE4C48-A346-45B9-BEA4-1E8C13E666B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38AE4C48-A346-45B9-BEA4-1E8C13E666B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38AE4C48-A346-45B9-BEA4-1E8C13E666B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
