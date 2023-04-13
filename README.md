@@ -14,7 +14,7 @@ Computer hardware store (e-commerce, sorry 💔)
     - 🔗 Link: https://www.youtube.com/watch?v=g6OVgndzYpQ
     - 📄 Projects: V6 - V7
 3. **_Trade offs in model - DDD trilemma_**
-    - 🔗 Link: TODO
+    - 🔗 Link: https://www.youtube.com/watch?v=zwT2bRWgsMM
     - 📄 Projects: V8 - V9
 
 ## Requirements
