@@ -47,6 +47,11 @@ public sealed class CheckoutCart
          */
         foreach (var product in Products)
         {
+            if (!product.Product.LimitedAvailability)
+            {
+                continue;
+            }
+            
             var orderWithLimitedProductExistsInThisQuarter = await orderRepository.Exists(
                 specification: new ActiveOrderWithLimitedProductThisQuarter(CustomerId, product.Product.Name),
                 cancellationToken: CancellationToken.None);
