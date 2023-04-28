@@ -40,20 +40,17 @@ public sealed class CheckoutCart
 
     public async Task<Order.Order> PlaceOrder(IOrderRepository orderRepository)
     {
+        var limitedProducts = Products.Where(x => x.Product.LimitedAvailability);
+        
         /*
          * This is obviously a naive implementation but in same cases might yield better results
          * than using JOINs, since we can issue simpler queries in parallel and then
          * scatter and collect with Task.WhenAll(...)
          */
-        foreach (var product in Products)
+        foreach (var limitedProduct in limitedProducts)
         {
-            if (!product.Product.LimitedAvailability)
-            {
-                continue;
-            }
-            
             var orderWithLimitedProductExistsInThisQuarter = await orderRepository.Exists(
-                specification: new ActiveOrderWithLimitedProductThisQuarter(CustomerId, product.Product.Name),
+                specification: new ActiveOrderWithLimitedProductThisQuarter(CustomerId, limitedProduct.Product.Name),
                 cancellationToken: CancellationToken.None);
 
             if (orderWithLimitedProductExistsInThisQuarter)
