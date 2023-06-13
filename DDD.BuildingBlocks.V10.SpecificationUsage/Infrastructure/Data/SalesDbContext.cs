@@ -26,5 +26,6 @@ public class SalesDbContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseNpgsql("Host=localhost;Database=ddd;Username=postgres;Password=");
+        optionsBuilder.LogTo(Console.WriteLine);
     }
 }

@@ -18,8 +18,6 @@ internal class OrderRepository : IOrderRepository
     
     public async Task<bool> Exists(Specification<Order> specification, CancellationToken cancellationToken)
     {
-        var query = _dbContext.Orders.Where(specification).ToQueryString();
-        _logger.LogInformation(query);
         return await _dbContext.Orders.Where(specification).AnyAsync(cancellationToken);
     }
 

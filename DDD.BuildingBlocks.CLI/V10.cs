@@ -26,7 +26,7 @@ public class V10
         {
             Id = Guid.NewGuid(),
             Name = "PC",
-            Price = 21000.37m,
+            Price = 2100.37m,
             SKU = "1234",
             LimitedAvailability = true
         };
@@ -39,7 +39,7 @@ public class V10
         
         checkout.SetShipment(shipment);
         checkout.SetPayment(payment);
-        
+        //
         // await context.AddAsync(checkout);
         // await context.SaveChangesAsync();
         //
