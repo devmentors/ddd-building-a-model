@@ -4,13 +4,13 @@ using DDD.BuildingBlocks.V10.SpecificationUsage.Core.Shared.Specifications;
 
 namespace DDD.BuildingBlocks.V10.SpecificationUsage.Core.Order;
 
-public class ActiveOrderWithLimitedProductThisQuarter : Specification<Order>
+public class HasActiveOrderWithLimitedProductThisQuarter : Specification<Order>
 {
     private readonly Guid _customerId;
     private readonly string _limitedProductName;
     private readonly YearQuarter _thisQuarter = new(DateTime.UtcNow);
 
-    public ActiveOrderWithLimitedProductThisQuarter(Guid customerId, string limitedProductName)
+    public HasActiveOrderWithLimitedProductThisQuarter(Guid customerId, string limitedProductName)
     {
         _customerId = customerId;
         _limitedProductName = limitedProductName;

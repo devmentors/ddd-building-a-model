@@ -1,3 +1,4 @@
+using DDD.BuildingBlocks.V10.SpecificationUsage.Core.Cart.Specifications;
 using DDD.BuildingBlocks.V10.SpecificationUsage.Core.Exceptions;
 using DDD.BuildingBlocks.V10.SpecificationUsage.Core.Shared;
 
@@ -30,9 +31,10 @@ public sealed class CheckoutCart
     public void SetPayment(Payment payment)
     {
         var cartValue = _products.Sum(x => x.Quantity * x.Product.Price);
-
+        var canPayWithCash = new CanPayWithCash(cartValue).Check(payment);
+        
         // does this logic belong to the Cart itself?
-        if (cartValue > 20_000 && payment.PaymentMethod is PaymentMethod.Cash)
+        if (canPayWithCash is false)
         {
             throw new PaymentMethodNotAllowedException();
         }

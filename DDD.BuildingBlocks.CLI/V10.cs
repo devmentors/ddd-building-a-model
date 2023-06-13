@@ -26,7 +26,7 @@ public class V10
         {
             Id = Guid.NewGuid(),
             Name = "PC",
-            Price = 2100.37m,
+            Price = 21000.37m,
             SKU = "1234",
             LimitedAvailability = true
         };
@@ -35,7 +35,7 @@ public class V10
         var checkout = cart.Checkout();
 
         var shipment = new Shipment("Warsaw", "Test", 12, "DevMentors");
-        var payment = new Payment(PaymentMethod.Cash);
+        var payment = new Payment(PaymentMethod.Cash, PayerType.B2B);
         
         checkout.SetShipment(shipment);
         checkout.SetPayment(payment);

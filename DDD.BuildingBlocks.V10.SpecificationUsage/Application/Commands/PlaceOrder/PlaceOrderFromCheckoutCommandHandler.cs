@@ -31,7 +31,7 @@ public class PlaceOrderFromCheckoutCommandHandler
         foreach (var orderLine in order.Lines)
         {
             var orderWithLimitedProductExistsInThisQuarter = await _orderRepository.Exists(
-                specification: new ActiveOrderWithLimitedProductThisQuarter(order.CustomerId, orderLine.Name),
+                specification: new HasActiveOrderWithLimitedProductThisQuarter(order.CustomerId, orderLine.Name),
                 cancellationToken: cancellationToken);
 
             if (orderWithLimitedProductExistsInThisQuarter)

@@ -4,14 +4,16 @@
     {
         public Guid Id { get; private set; } = Guid.NewGuid();
         public PaymentMethod PaymentMethod { get; private set; }
+        public PayerType PayerType { get; private set; }
 
         private Payment()
         {
         }
         
-        public Payment(PaymentMethod paymentMethod)
+        public Payment(PaymentMethod paymentMethod, PayerType payerType = PayerType.B2C)
         {
             PaymentMethod = paymentMethod;
+            PayerType = payerType;
         }
     }
 
@@ -20,5 +22,11 @@
         Cash,
         Cashless,
         Loan
+    }
+    
+    public enum PayerType
+    {
+        B2B,
+        B2C
     }
 }

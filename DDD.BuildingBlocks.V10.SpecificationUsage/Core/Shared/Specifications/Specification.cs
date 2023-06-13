@@ -10,6 +10,16 @@ public abstract class Specification<T>
     {
         return specification.AsPredicateExpression();
     }
+    
+    public static OrSpecification<T> operator |(Specification<T> left, Specification<T> right)
+    {
+        return left.Or(right);
+    }
+    public static AndSpecification<T> operator &(Specification<T> left, Specification<T> right)
+    {
+        return left.And(right);
+    }
+    
 
     public bool Check(T obj)
     {
