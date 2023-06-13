@@ -1,5 +1,6 @@
 ﻿using DDD.BuildingBlocks.CLI;
 
-V1.Run();
+await V10.Run();
+
 
 //V2.Run();

@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
@@ -10,6 +10,14 @@
   <ItemGroup>
     <ProjectReference Include="..\DDD.BuildingBlocks.Core.V1\DDD.BuildingBlocks.Core.V1.csproj" />
     <ProjectReference Include="..\DDD.BuildingBlocks.Core.V2.Encapsulated\DDD.BuildingBlocks.Core.V2.Encapsulated.csproj" />
+    <ProjectReference Include="..\DDD.BuildingBlocks.V10.SpecificationUsage\DDD.BuildingBlocks.V10.SpecificationUsage.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>
